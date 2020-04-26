@@ -1,0 +1,46 @@
+2020-04-26 16:23:56,373 INFO  http-nio-8080-exec-10            - Found 1 HealthChecker implementation:sofaComponentHealthChecker
+2020-04-26 16:23:56,375 INFO  http-nio-8080-exec-10            - Found 4 HealthIndicator implementation:sofaBootHealthIndicator,multiApplicationHealthIndicator,sofaComponentHealthIndicator,diskSpaceHealthIndicator
+2020-04-26 16:23:56,376 INFO  http-nio-8080-exec-10            - Found 0 ReadinessCheckCallback implementation: 
+2020-04-26 16:23:56,377 INFO  http-nio-8080-exec-10            - Begin SOFABoot HealthChecker readiness check.
+2020-04-26 16:23:56,379 INFO  http-nio-8080-exec-10            - HealthChecker[sofaComponentHealthChecker] readiness check success with 0 retry.
+2020-04-26 16:23:56,383 INFO  http-nio-8080-exec-10            - SOFABoot HealthChecker readiness check result: success.
+2020-04-26 16:23:56,383 INFO  http-nio-8080-exec-10            - Begin SOFABoot HealthIndicator readiness check.
+2020-04-26 16:23:56,385 INFO  http-nio-8080-exec-10            - HealthIndicator[diskSpaceHealthIndicator] readiness check success.
+2020-04-26 16:23:56,385 INFO  http-nio-8080-exec-10            - SOFABoot HealthIndicator readiness check result: success.
+2020-04-26 16:23:56,385 INFO  http-nio-8080-exec-10            - Begin ReadinessCheckCallback readiness check
+2020-04-26 16:23:56,386 INFO  http-nio-8080-exec-10            - ReadinessCheckCallback readiness check result: success.
+2020-04-26 16:23:56,386 INFO  http-nio-8080-exec-10            - Readiness check result: success
+2020-04-26 17:06:10,200 INFO  http-nio-8080-exec-1             - SOFABoot HealthCheck Starting!
+2020-04-26 17:06:22,488 INFO  http-nio-8080-exec-1             - Found 1 HealthChecker implementation:sofaComponentHealthChecker
+2020-04-26 17:06:22,490 INFO  http-nio-8080-exec-1             - Found 3 HealthIndicator implementation:sofaBootHealthIndicator,multiApplicationHealthIndicator,diskSpaceHealthIndicator
+2020-04-26 17:06:22,491 INFO  http-nio-8080-exec-1             - Found 0 ReadinessCheckCallback implementation: 
+2020-04-26 17:06:22,492 INFO  http-nio-8080-exec-1             - Begin SOFABoot HealthChecker readiness check.
+2020-04-26 17:06:22,495 INFO  http-nio-8080-exec-1             - HealthChecker[sofaComponentHealthChecker] readiness check success with 0 retry.
+2020-04-26 17:06:22,498 INFO  http-nio-8080-exec-1             - SOFABoot HealthChecker readiness check result: success.
+2020-04-26 17:06:22,498 INFO  http-nio-8080-exec-1             - Begin SOFABoot HealthIndicator readiness check.
+2020-04-26 17:06:22,504 INFO  http-nio-8080-exec-1             - HealthIndicator[multiApplicationHealthIndicator] readiness check success.
+2020-04-26 17:06:22,504 INFO  http-nio-8080-exec-1             - HealthIndicator[diskSpaceHealthIndicator] readiness check success.
+2020-04-26 17:06:22,504 INFO  http-nio-8080-exec-1             - SOFABoot HealthIndicator readiness check result: success.
+2020-04-26 17:06:22,504 INFO  http-nio-8080-exec-1             - Begin ReadinessCheckCallback readiness check
+2020-04-26 17:06:22,504 INFO  http-nio-8080-exec-1             - ReadinessCheckCallback readiness check result: success.
+2020-04-26 17:06:22,505 INFO  http-nio-8080-exec-1             - Readiness check result: success
+2020-04-26 17:06:22,524 INFO  http-nio-8080-exec-1             - Begin SOFABoot HealthChecker liveness check.
+2020-04-26 17:06:22,524 INFO  http-nio-8080-exec-1             - HealthChecker[sofaComponentHealthChecker] liveness check success with 0 retry.
+2020-04-26 17:06:22,524 INFO  http-nio-8080-exec-1             - SOFABoot HealthChecker liveness check result: success.
+2020-04-26 17:32:35,876 INFO  http-nio-8080-exec-2             - SOFABoot HealthCheck Starting!
+2020-04-26 17:32:48,499 INFO  http-nio-8080-exec-2             - Found 1 HealthChecker implementation:sofaComponentHealthChecker
+2020-04-26 17:32:48,500 INFO  http-nio-8080-exec-2             - Found 3 HealthIndicator implementation:sofaBootHealthIndicator,multiApplicationHealthIndicator,diskSpaceHealthIndicator
+2020-04-26 17:32:48,501 INFO  http-nio-8080-exec-2             - Found 0 ReadinessCheckCallback implementation: 
+2020-04-26 17:32:48,501 INFO  http-nio-8080-exec-2             - Begin SOFABoot HealthChecker readiness check.
+2020-04-26 17:32:48,503 INFO  http-nio-8080-exec-2             - HealthChecker[sofaComponentHealthChecker] readiness check success with 0 retry.
+2020-04-26 17:32:48,506 INFO  http-nio-8080-exec-2             - SOFABoot HealthChecker readiness check result: success.
+2020-04-26 17:32:48,507 INFO  http-nio-8080-exec-2             - Begin SOFABoot HealthIndicator readiness check.
+2020-04-26 17:32:48,512 INFO  http-nio-8080-exec-2             - HealthIndicator[multiApplicationHealthIndicator] readiness check success.
+2020-04-26 17:32:48,512 INFO  http-nio-8080-exec-2             - HealthIndicator[diskSpaceHealthIndicator] readiness check success.
+2020-04-26 17:32:48,512 INFO  http-nio-8080-exec-2             - SOFABoot HealthIndicator readiness check result: success.
+2020-04-26 17:32:48,512 INFO  http-nio-8080-exec-2             - Begin ReadinessCheckCallback readiness check
+2020-04-26 17:32:48,513 INFO  http-nio-8080-exec-2             - ReadinessCheckCallback readiness check result: success.
+2020-04-26 17:32:48,513 INFO  http-nio-8080-exec-2             - Readiness check result: success
+2020-04-26 17:32:48,535 INFO  http-nio-8080-exec-2             - Begin SOFABoot HealthChecker liveness check.
+2020-04-26 17:32:48,535 INFO  http-nio-8080-exec-2             - HealthChecker[sofaComponentHealthChecker] liveness check success with 0 retry.
+2020-04-26 17:32:48,535 INFO  http-nio-8080-exec-2             - SOFABoot HealthChecker liveness check result: success.
