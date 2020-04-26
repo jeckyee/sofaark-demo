@@ -4,6 +4,7 @@ import com.alipay.sofa.ark.api.ArkClient;
 import com.alipay.sofa.ark.spi.model.Biz;
 import com.alipay.sofa.ark.spi.service.classloader.ClassLoaderHook;
 import com.alipay.sofa.ark.spi.service.classloader.ClassLoaderService;
+import com.alipay.sofa.ark.spi.service.extension.Extension;
 
 import java.io.IOException;
 import java.net.URL;
@@ -13,7 +14,7 @@ import java.util.Enumeration;
  * Created by yangjiang on 2020/4/26.
  */
 
-
+@Extension("biz-classloader-hook")
 public class DelegateMasterBizClassloaderHook implements ClassLoaderHook<Biz> {
     @Override
     public Class<?> preFindClass(String name, ClassLoaderService classLoaderService, Biz biz) throws ClassNotFoundException {
