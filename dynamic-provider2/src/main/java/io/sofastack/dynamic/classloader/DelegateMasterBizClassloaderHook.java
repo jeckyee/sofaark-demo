@@ -24,7 +24,9 @@ public class DelegateMasterBizClassloaderHook implements ClassLoaderHook<Biz> {
     @Override
     public Class<?> postFindClass(String name, ClassLoaderService classLoaderService, Biz biz) throws ClassNotFoundException {
         // 按包名组织
+        System.out.println("postFindClass=========="+name);
         if (name.startsWith("io.sofastack.dynamic.model")){
+            System.out.println("*****************************"+name);
             ClassLoader masterBizClassLoader = ArkClient.getBizManagerService().getBizInOrder().get(0).getBizClassLoader();
             return masterBizClassLoader.loadClass(name);
         }
@@ -34,7 +36,9 @@ public class DelegateMasterBizClassloaderHook implements ClassLoaderHook<Biz> {
     @Override
     public URL preFindResource(String name, ClassLoaderService classLoaderService, Biz biz) {
         // 资源也要委托
+        System.out.println("preFindResource=========="+name);
         if (name.startsWith("io/sofastack/dynamic/model")) {
+            System.out.println("*****************************"+name);
             ClassLoader masterBizClassLoader = ArkClient.getBizManagerService().getBizInOrder().get(0).getBizClassLoader();
             try {
                 return masterBizClassLoader.getResource(name);
@@ -52,7 +56,9 @@ public class DelegateMasterBizClassloaderHook implements ClassLoaderHook<Biz> {
 
     @Override
     public Enumeration<URL> preFindResources(String name, ClassLoaderService classLoaderService, Biz biz) throws IOException {
+        System.out.println("preFindResources=========="+name);
         if (name.startsWith("io/sofastack/dynamic/model")){
+            System.out.println("*****************************"+name);
             ClassLoader masterBizClassLoader = ArkClient.getBizManagerService().getBizInOrder().get(0).getBizClassLoader();
             try {
                 return masterBizClassLoader.getResources(name);

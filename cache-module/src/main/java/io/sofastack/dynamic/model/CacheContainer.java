@@ -15,7 +15,7 @@ public class CacheContainer {
 
     @PostConstruct
     private void init(){
-        for (int i = 10000; i >= 0; i--) {
+        for (int i = 100000; i >= 0; i--) {
             ProductInfo productInfo = new ProductInfo();
             productInfo.setName("产品_"+i);
             productInfo.setOrderCount(i);

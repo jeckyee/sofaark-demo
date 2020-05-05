@@ -15,11 +15,15 @@ import com.alipay.sofa.runtime.api.annotation.SofaReference;
 import io.sofastack.dynamic.facade.StrategyService;
 import io.sofastack.dynamic.model.CacheContainer;
 import io.sofastack.stockmng.service.ProductService;
+import org.apache.logging.log4j.util.Strings;
+import org.apache.tomcat.util.buf.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 
 @RestController
@@ -61,16 +65,35 @@ public class JarController {
         }
     }
 
-    @GetMapping(value = "/jar/list")
+
+
+    @GetMapping(value = "/jar/master")
     @ResponseBody
-    public Set<String> listBiz(){
+    public String listBiz(){
         try {
-            return ArkClient.getBizManagerService().getAllBizIdentities();
+            return ArkClient.getBizManagerService().getBizInOrder().get(0).getBizName();
         } catch (Throwable e){
             e.printStackTrace();
             return null;
         }
     }
 
-
+    @GetMapping(value = "/jar/classloader")
+    @ResponseBody
+    public String classloader(){
+        try {
+            List<String> collect = ArkClient.getBizManagerService().getBizInOrder().stream()
+                    .map(n -> n.getBizName() + ":" + n.getBizClassLoader().toString() + "\n").collect(Collectors.toList());
+            return "provider1:" + strategyService1.getClass().getClassLoader().toString()
+                    + "\nprovider2:"+strategyService2.getClass().getClassLoader().toString()
+                    + "\ncacheContainer:"+cacheContainer.getClass().getClassLoader().toString()
+                    + "\nproductInfo:"+cacheContainer.random(1).get(0).getClass().getClassLoader().toString()
+                    + "\nproductService:"+productService.getClass().getClassLoader().toString()
+                    + "\nJarController:"+this.getClass().getClassLoader().toString()
+                    + "\nbiz:" + StringUtils.join(collect);
+        } catch (Throwable e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 }
